@@ -1,0 +1,81 @@
+/* General Rules */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+/* General Rules */
+
+.slider-container {
+    position: relative;
+    height: 350px;
+    max-width: 550px;
+    margin: 10px auto 0;
+}
+
+.slider-container .slide-number {
+    background: lightgray;
+    text-transform: capitalize;
+    font-weight: 600;
+    width: fit-content;
+    padding: 5px 15px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.slider-container img {
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slider-container img.active {
+    opacity: 1;
+    height: 311px;
+    width: 320px;
+}
+
+.slider-controls {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+.slider-controls span:not(span:nth-child(2)) {
+    padding: 5px 20px;
+    background-color: #00ffce;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.slider-controls span:nth-child(2) ul {
+    display: flex;
+    align-items: center;
+}
+
+.slider-controls span li {
+    padding: 5px 10px;
+    background-color: rgba(0, 255, 204, 0.2);
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.slider-controls span li.active {
+    background-color: #00ffce;
+}
+
+.slider-controls span:first-child.disabled,
+.slider-controls span:last-child.disabled {
+    background-color: hsla(168, 100%, 50%, 0.4);
+    cursor: no-drop;
+}
